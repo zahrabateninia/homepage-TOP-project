@@ -1,8 +1,17 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,500&family=Open+Sans:ital,wght@0,300;1,400&family=Roboto:ital,wght@0,100;0,500;0,900;1,100;1,300;1,400&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;   /* the padding and border are included inside the element’s total width */
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
 
 }
+
 body{
     background-color: rgb(244, 227, 227);
 }
