@@ -143,3 +143,14 @@ header .follow a:hover{
         left: 0;
     }
 }
+
+
+@media (max-width:450px){
+    html{
+        font-size: 50%; 
+    }
+    header{
+        width:100%;
+    }
+
+}
