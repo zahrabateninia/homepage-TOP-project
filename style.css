@@ -2,6 +2,11 @@
 
 :root{
     --main-color: #AD6F5C;
+    --dark-pink: #A24442;
+    --grey: #dadad3;
+    --dark-grey: #777169;
+    --brown: #654B42;
+    --very-dark-brown: #312423;
 }
 *{
     font-family: 'Roboto', sans-serif;
@@ -24,3 +29,15 @@ html{
 
 }
 
+body{
+    background: var(--grey);
+    padding-left: 30rem;
+
+}
+
+header{
+    position: fixed;
+    top:0; left:0;bottom:0;
+    background: var(--dark-pink)
+
+}
