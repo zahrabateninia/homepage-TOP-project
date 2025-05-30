@@ -95,6 +95,48 @@ header .follow a:hover{
     cursor: pointer;
     font-size: 3rem;
     padding: 1.5rem;
+    display: none;
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+
+    html{
+        font-size: 55%; 
+    }
+    body{
+        /* padding: 0; */
+    }
+    #menu-bars{
+        display: initial; /* its default display mode*/
+    }
+    header{
+        left: -120%;
+    }
+}
