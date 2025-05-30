@@ -131,12 +131,15 @@ header .follow a:hover{
         font-size: 55%; 
     }
     body{
-        /* padding: 0; */
+        padding: 0;
     }
     #menu-bars{
         display: initial; /* its default display mode*/
     }
     header{
         left: -120%;
+    }
+    header.active{
+        left: 0;
     }
 }
