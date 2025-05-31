@@ -310,6 +310,44 @@ header .follow a:hover{
 
 /* about me section ends */
 
+/* service section starts */
+.service .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+
+.box h3{
+    color: var(--very-dark-brown);
+    padding: 1.1rem;
+    font-size: 2.2rem;
+}
+.service .box-container .box{
+    flex: 1 1 30rem;
+    text-align: center;
+    padding: 2rem;
+    /* background-color: var(--main-color); */
+    background: white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: var(--dark-grey);
+}
+
+.service .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    color: white;
+    background-color: var(--dark-pink);
+    border-radius: 50%;
+
+}
+
+/* service section ends */
+
 
 
 
