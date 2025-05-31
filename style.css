@@ -36,9 +36,10 @@ body{
 }
 
 section{
-    padding: 1rem 5%;
-    min-height: 10vh;
+    padding: 1rem 10%;
+    min-height: 100vh;
 }
+
 header{
     position: fixed;
     top:0; left:0;bottom:0;
@@ -208,6 +209,54 @@ header .follow a:hover{
 }
 
 /* home section ends */
+
+/* about me section starts */
+.heading{
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    color: var(--very-dark-brown);
+    text-transform: uppercase;
+}
+.heading span{
+    color: var(--dark-pink);
+    text-transform: uppercase;
+
+}
+
+.about .row-1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.about .row-1 .content{
+    flex: 1 1 50rem;
+}
+
+.about .row-1 .content h3{
+    color: var(--very-dark-brown);
+    font-size: 3.5rem;
+}
+.about .row-1 .content p{
+    color: var(--brown);
+    font-size: 2rem;
+    padding: .5rem 0;
+}
+.about .row-1 .content .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: .5rem 0;
+}
+.about .row-1 .content .box-container .box{
+    flex: 1 1 20rem;
+}
+.about .row-1 .content .box-container .box span{
+    color: var(--main-color);
+}
+
+/* about me section ends */
 
 
 
