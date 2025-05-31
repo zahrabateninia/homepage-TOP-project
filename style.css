@@ -172,11 +172,11 @@ header .follow a:hover{
     color: var(--brown);
 }
 .home .content h3{
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--brown);
 }
 .home .content h3 span{
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--dark-pink);
     text-transform: uppercase;
 }
@@ -235,8 +235,8 @@ header .follow a:hover{
 }
 
 .about .row-1 .content h3{
-    color: var(--very-dark-brown);
-    font-size: 3.5rem;
+    color: var(--brown);
+    font-size: 3rem;
 }
 .about .row-1 .content p{
     color: var(--brown);
@@ -254,7 +254,59 @@ header .follow a:hover{
 }
 .about .row-1 .content .box-container .box span{
     color: var(--main-color);
+    border-radius: 50rem;
 }
+
+.about .row-2 .skills .progress h3{
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem 0;
+    font-size: 1.7rem;
+    color: var(--very-dark-brown);
+    font-weight: 400;
+    color: var(--brown);
+}
+
+.about .row-2 .skills .progress .bar{
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    height: 1rem;
+    border-radius: 50rem;
+}
+.about .row-2 .skills .progress .bar span{
+    display: block;
+    height: 100%;
+    background-color: #A24442;
+}
+
+/* bars */
+.about .row-2 .skills .progress:nth-child(1) .bar span{
+    width: 80%;
+    border-radius: 50rem;
+}
+.about .row-2 .skills .progress:nth-child(2) .bar span{
+    width: 80%;
+    border-radius: 50rem;
+}
+.about .row-2 .skills .progress:nth-child(3) .bar span{
+    width: 50%;
+    border-radius: 50rem;
+}
+.about .row-2 .skills .progress:nth-child(4) .bar span{
+    width: 90%;
+    border-radius: 50rem;
+}
+.about .row-2 .skills .progress:nth-child(5) .bar span{
+    width: 80%;
+    border-radius: 50rem;
+}
+/* end of bars */
+
+/* 
+.about .row-2 .box-container{
+    flex: 1 1 40rem;
+} */
 
 /* about me section ends */
 
