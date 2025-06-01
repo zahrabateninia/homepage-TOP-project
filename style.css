@@ -348,7 +348,7 @@ header .follow a:hover{
 
 /* service section ends */
 
-/* experience section styles starts */
+/* experience section styles start */
 .experience .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -399,10 +399,71 @@ header .follow a:hover{
     color: var(--brown);
     padding: .5rem 0;
 }
-/* experience section styles ends */
+/* experience section styles end */
 
 
+/* portfolio section styles start */
+.portfolio .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.portfolio .box-container .box{
+    flex: 1 1 30rem;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    border: 1rem solid white;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    background-color: white;
+}
+.portfolio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    /* maintain the image’s aspect ratio and ensure it completely covers the container,
+     even if part of the image gets cropped. */
+    object-fit: cover;
+    border-radius: .5rem;
+    position: relative;
+    z-index: 1;
+}
 
+.portfolio .box-container .box:hover img{
+    height: 75%;
+    width: 75%;
+
+}
+.portfolio .box-container .box h3{
+    text-transform: uppercase;
+    position: absolute;
+    bottom: .5rem; left: 1rem;
+    color: var(--very-dark-brown);
+}
+
+.portfolio .box-container .box .icons{
+    position: absolute;
+    top: 1rem; right: 1rem;
+
+}
+.portfolio .box-container .box .icons a{
+    display: block; /*links are on top of each other*/
+    height: 4rem; width: 4rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    background-color: white;
+    color: var(--very-dark-brown);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.portfolio .box-container .box .icons a:hover{
+    background-color: var(--main-color);
+}
+
+
+/* portfolio section styles end */
 
 
 
