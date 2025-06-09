@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,500&family=Open+Sans:ital,wght@0,300;1,400&family=Roboto:ital,wght@0,100;0,500;0,900;1,100;1,300;1,400&display=swap');
 
 :root{
-    --very-dark-brown: #312423;
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    --primary-color : #e3d9d1;
-    --secondary-color: #5F4B44;
-    --button-span-color: #ff5252;
-    --khaki: #a99f9f8c;
-    --dun-color: #DAC9B6;
-    --brown-sugar-color-sugar-color: #C27A64;
-
+    --primary-color : #252422; 
+    --secondary-color: #3f6c6189;
+    --button-span-color: #EB5E28;
+    --btn-hover: #f18a62;
+    --khaki: #a99f9fdc;
+    --grey-color: #DAC9B6;
+    --brown-sugar-color: #e6b4a5;   /* Dark brown for primary text */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 .5rem 1rem var(--shadow-color);
+    --light-color: #fffcf2d3;
+    --grey-color: #CCC5B9;
+    --dark-brown-color: #403D39;
 
 }
 *{
@@ -34,7 +38,7 @@ html{
 }
 
 body{
-    background: var(--khaki);
+    background: var(--primary-color);
     padding-left: 30rem;
 
 }
@@ -61,7 +65,7 @@ header{
 
 header .logo{
     text-transform: uppercase;
-    color: var(--dun-color);
+    color: var(--light-color);
     font-size: 3rem;
     font-weight: bolder;
 
@@ -75,18 +79,18 @@ header .logo span{
 header .navbar a{
     display: block;
     font-size: 2rem;
-    color: var(--dun-color);
+    color: var(--grey-color);
     margin: 2rem 0;
 }
 
 header .navbar a:hover{
     letter-spacing: .1rem;
-    color: var(--primary-color);
+    color: var(--btn-hover);
 }
 
 header .follow a{
     font-size: 2.5rem;
-    color: var(--dun-color);
+    color: var(--grey-color);
     margin: 0 .6rem;
 
 }
@@ -99,7 +103,7 @@ header .follow a:hover{
     right: 1rem; top: 1rem;
     z-index: 10000;
     background: var(--secondary-color);
-    color: var(--dun-color);
+    color: var(--grey-color);
     border-radius: .5rem;
     cursor: pointer;
     font-size: 3rem;
@@ -141,7 +145,7 @@ header .follow a:hover{
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 10000;
-    transition: .3s linear;
+    transition: .1s linear;
 
 }
 
@@ -185,13 +189,9 @@ header .follow a:hover{
     flex: 1 1 40rem;
 }
 
-.home .content .hi{
-    font-size: 2rem;
-    color: var(--brown-sugar-color);
-}
 .home .content h3{
     font-size: 4rem;
-    color: var(--brown-sugar-color);
+    color: var(--light-color);
 }
 .home .content h3 span{
     font-size: 4rem;
@@ -202,7 +202,7 @@ header .follow a:hover{
 .home .content .info{
 
     font-size: 2.5rem;
-    color: var(--brown-sugar-color);
+    color: var(--light-color);
     padding: .5rem 0;
 }
 .home .content .text{
@@ -217,12 +217,12 @@ header .follow a:hover{
     padding: .8rem 3rem;
     font-size: 1.8rem;
     background-color: var(--button-span-color);
-    color: white;
+    color: var(--light-color);
     border-radius: .2rem;
 }
 
 .btn:hover{
-    background-color: var(--primary-color);
+    background-color: var(--btn-hover);
     letter-spacing: .3rem;
 }
 
@@ -232,7 +232,7 @@ header .follow a:hover{
 .heading{
     font-size: 4rem;
     padding-bottom: 1rem;
-    color: var(--very-dark-brown);
+    color: var(--light-color);
     text-transform: uppercase;
 }
 .heading span{
@@ -253,11 +253,11 @@ header .follow a:hover{
 }
 
 .about .row-1 .content h3{
-    color: var(--brown-sugar-color);
+    color: var(--khaki);
     font-size: 3rem;
 }
 .about .row-1 .content p{
-    color: var(--brown-sugar-color);
+    color: var(--khaki);
     font-size: 2rem;
     padding: .5rem 0;
 }
@@ -287,7 +287,7 @@ header .follow a:hover{
 
 .about .row-2 .skills .progress .bar{
     width: 100%;
-    background-color: var(--dun-color);
+    background-color: var(--grey-color);
     overflow: hidden;
     height: 1rem;
     border-radius: 50rem;
@@ -321,12 +321,6 @@ header .follow a:hover{
 }
 /* end of bars */
 
-/* 
-.about .row-2 .box-container{
-    flex: 1 1 40rem;
-} */
-
-/* about me section ends */
 
 /* service section starts */
 .service .box-container{
@@ -345,12 +339,10 @@ header .follow a:hover{
     flex: 1 1 30rem;
     text-align: center;
     padding: 2rem;
-    /* background-color: var(--primary-color); */
-    background: var(--dun-color);
-    box-shadow: var(--box-shadow);
+    background: var(--light-color);
     border-radius: .5rem;
     font-size: 2rem;
-    color: var(--khaki);
+    color: var(--dark-brown-color);
 }
 
 .service .box-container .box i{
@@ -358,8 +350,8 @@ header .follow a:hover{
     width: 6rem;
     line-height: 6rem;
     font-size: 2.5rem;
-    color: var(--dun-color);
-    background-color: var(--secondary-color);
+    color: var(--light-color);
+    background-color: var(--button-span-color);
     border-radius: 50%;
 
 }
@@ -376,23 +368,23 @@ header .follow a:hover{
 .experience .box-container .box{
     position: relative;
     flex: 1 1 33rem;
-    border-left: .4rem solid var(--secondary-color);
+    border-left: .4rem solid var(--button-span-color);
     padding-left: 2rem;
     padding-bottom: 2rem;
     padding-right: 2rem;
 }
-
-.experience .box-container .box:before{
+/* a circle above the left border */
+/* .experience .box-container .box:before{
     content: '';
     position: absolute;
     top: 0; left: -1rem;
     height: 2rem; width: 2rem;
     border-radius: 50%;
-    background-color: var(--secondary-color);
-}
+    background-color: var(--button-span-color);
+} */
 
 .experience .box-container .box .content{
-    background-color: var(--dun-color);
+    background-color: var(--light-color);
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     padding: 1.5rem;
@@ -400,21 +392,21 @@ header .follow a:hover{
 
 .experience .box-container .box span{
     font-size: 1.5rem;
-    color: var(--dun-color);
-    background-color: #AD6F5C;
+    color: var(--light-color);
+    background-color: var(--button-span-color);
     border-radius: .5rem;
     padding: .5rem 1rem;
 }
 
 .experience .box-container .box h3{
     font-size: 2.5rem;
-    color: var(--very-dark-brown);
+    color: var(--dark-brown-color);
     padding: .5rem 0;
 }
 
 .experience .box-container .box p{
     font-size: 1.8rem;
-    color: var(--brown-sugar-color);
+    color: var(--dark-brown-color);
     padding: .5rem 0;
 }
 /* experience section styles end */
@@ -431,10 +423,10 @@ header .follow a:hover{
     height: 25rem;
     position: relative;
     overflow: hidden;
-    border: 1rem solid var(--dun-color);
+    border: 1rem solid var(--grey-color);
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    background-color: var(--dun-color);
+    background-color: var(--grey-color);
 }
 
 .image {
@@ -477,14 +469,14 @@ header .follow a:hover{
     border-radius: .5rem;
     font-size: 1.5rem;
     line-height: 4rem;
-    background-color: var(--dun-color);
+    background-color: var(--grey-color);
     color: var(--very-dark-brown);
     text-align: center;
     margin-bottom: 1rem;
 }
 
 .portfolio .box-container .box .icons a:hover{
-    background-color: var(--primary-color);
+    background-color: var(--btn-hover);
 }
 
 
@@ -503,7 +495,7 @@ header .follow a:hover{
     flex: 1 1 25rem;
     text-align: center;
     padding: 2rem;
-    background-color: var(--dun-color);
+    background-color: var(--grey-color);
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
 
@@ -512,8 +504,8 @@ header .follow a:hover{
     height: 5rem; width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    background-color: var(--secondary-color);
-    color: var(--dun-color);
+    background-color: var(--button-span-color);
+    color: var(--light-color);
     border-radius: 50%;
 
 }
@@ -523,7 +515,7 @@ header .follow a:hover{
     padding: .6rem 0;
 }
 .contact .icons-container .icons p{
-    color: var(--brown-sugar-color);
+    color: var(--dark-brown-color);
     font-size: 1.7rem;
     padding: .6rem 0;
 }
@@ -537,14 +529,14 @@ header .follow a:hover{
 
 .contact .row form{
     flex: 1 1 55rem;
-    background-color: var(--dun-color);
+    background-color: var(--grey-color);
     padding: 0 2rem;
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
 }
 .contact .row .map{
     flex: 1 1 25rem;
-    /* border: 1rem solid var(--dun-color); */
+    /* border: 1rem solid var(--grey-color); */
     width: 100%;
 }
 
@@ -587,8 +579,7 @@ footer{
     font-size: 1.4rem;
     padding: 1.5rem;
     text-align: center;
-    background-color: var(--primary-color);
-    color: var(--dun-color);
+    color: var(--grey-color);
 }
 
 footer span{
