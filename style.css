@@ -3,7 +3,7 @@
 :root{
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     --primary-color : #252422; 
-    --secondary-color: #3f6c6189;
+    --secondary-color: #3f6c6155;
     --button-span-color: #EB5E28;
     --btn-hover: #f18a62;
     --khaki: #a99f9fdc;
@@ -425,18 +425,19 @@ header .follow a:hover{
     height: 25rem;
     position: relative;
     overflow: hidden;
-    border: 1rem solid var(--secondary-color);
+    /* border: 1rem solid var(--secondary-color); */
     border-radius: .5rem;
     background-color: var(--secondary-color);
+    padding: 1rem;
 }
 
-.image {
-    background-color: var(--secondary-color);
+/* .image {
+    background-color: red;
     position: relative;
     border-radius: 50%;
     z-index: 1;
     overflow: hidden;
-  }
+  } */
 .portfolio .box-container .box img{
     height: 100%;
     width: 100%;
@@ -444,12 +445,15 @@ header .follow a:hover{
     position: relative;
     z-index: 1;
     display: block;
+    filter: grayscale(100%);
+    border-radius: .5rem;
 }
 
 
 .portfolio .box-container .box:hover img{
     height: 75%;
     width: 75%;
+    filter: grayscale(0%);
 
 }
 .portfolio .box-container .box h3{
@@ -458,17 +462,20 @@ header .follow a:hover{
     bottom: .5rem; left: 1rem;
     color: var(--grey-color);
 }
-
-.portfolio .box-container .box .icons{
+.portfolio .box-container .box .icons {
     position: absolute;
-    top: 1rem; right: 1rem;
-
-}
+    top: 50%; /* move the top edge of .icons to the middle of its parent.*/
+    /* right: 1rem; */
+    right: 9%;
+    transform: translateX(-9%);
+    transform: translateY(-50%); /* pull it up by 50% of its own height for perfect centering*/
+  }
+  
 .portfolio .box-container .box .icons a{
     display: block; /*links are on top of each other*/
     height: 4rem; width: 4rem;
     border-radius: .5rem;
-    font-size: 1.7rem;
+    font-size: 2.2rem;
     line-height: 4rem;
     color: var(--light-color);
     text-align: center;
