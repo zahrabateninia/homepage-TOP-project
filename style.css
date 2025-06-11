@@ -52,6 +52,8 @@ header{
     position: fixed;
     top:0; left:0;bottom:0;
     background: var(--secondary-color);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* for Safari */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,8 +104,8 @@ header .follow a:hover{
     position: fixed;
     right: 1rem; top: 1rem;
     z-index: 10000;
-    background: var(--secondary-color);
-    color: var(--grey-color);
+    background: var(--button-span-color);
+    color: var(--light-color);
     border-radius: .5rem;
     cursor: pointer;
     font-size: 3rem;
@@ -339,10 +341,11 @@ header .follow a:hover{
     flex: 1 1 30rem;
     text-align: center;
     padding: 2rem;
-    background: var(--light-color);
+    /* background: var(--light-color); */
+    background-color: var(--secondary-color);
     border-radius: .5rem;
     font-size: 2rem;
-    color: var(--dark-brown-color);
+    color: var(--light-color);
 }
 
 .service .box-container .box i{
@@ -384,9 +387,8 @@ header .follow a:hover{
 } */
 
 .experience .box-container .box .content{
-    background-color: var(--light-color);
+    background-color: var(--secondary-color);
     border-radius: .5rem;
-    box-shadow: var(--box-shadow);
     padding: 1.5rem;
 }
 
@@ -400,13 +402,13 @@ header .follow a:hover{
 
 .experience .box-container .box h3{
     font-size: 2.5rem;
-    color: var(--dark-brown-color);
+    color: var(--light-color);
     padding: .5rem 0;
 }
 
 .experience .box-container .box p{
     font-size: 1.8rem;
-    color: var(--dark-brown-color);
+    color: var(--light-color);
     padding: .5rem 0;
 }
 /* experience section styles end */
@@ -423,10 +425,9 @@ header .follow a:hover{
     height: 25rem;
     position: relative;
     overflow: hidden;
-    border: 1rem solid var(--grey-color);
+    border: 1rem solid var(--secondary-color);
     border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    background-color: var(--grey-color);
+    background-color: var(--secondary-color);
 }
 
 .image {
@@ -455,7 +456,7 @@ header .follow a:hover{
     text-transform: uppercase;
     position: absolute;
     bottom: .5rem; left: 1rem;
-    color: var(--very-dark-brown);
+    color: var(--grey-color);
 }
 
 .portfolio .box-container .box .icons{
@@ -467,16 +468,15 @@ header .follow a:hover{
     display: block; /*links are on top of each other*/
     height: 4rem; width: 4rem;
     border-radius: .5rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     line-height: 4rem;
-    background-color: var(--grey-color);
-    color: var(--very-dark-brown);
+    color: var(--light-color);
     text-align: center;
     margin-bottom: 1rem;
 }
 
 .portfolio .box-container .box .icons a:hover{
-    background-color: var(--btn-hover);
+    color: var(--button-span-color)
 }
 
 
@@ -495,8 +495,7 @@ header .follow a:hover{
     flex: 1 1 25rem;
     text-align: center;
     padding: 2rem;
-    background-color: var(--grey-color);
-    box-shadow: var(--box-shadow);
+    background-color: var(--secondary-color);
     border-radius: .5rem;
 
 }
@@ -510,12 +509,12 @@ header .follow a:hover{
 
 }
 .contact .icons-container .icons h3{
-    color: var(--very-dark-brown);
+    color: var(--light-color);
     font-size: 2rem;
     padding: .6rem 0;
 }
 .contact .icons-container .icons p{
-    color: var(--dark-brown-color);
+    color: var(--light-color);
     font-size: 1.7rem;
     padding: .6rem 0;
 }
@@ -529,9 +528,8 @@ header .follow a:hover{
 
 .contact .row form{
     flex: 1 1 55rem;
-    background-color: var(--grey-color);
+    background-color: var(--secondary-color);
     padding: 0 2rem;
-    box-shadow: var(--box-shadow);
     border-radius: .5rem;
 }
 .contact .row .map{
@@ -549,6 +547,7 @@ header .follow a:hover{
     font-size: 1.7rem;
     padding: 1rem 0;
     margin: 1rem 0;
+    padding-left: 1.5rem;
 
 }
 
@@ -561,15 +560,24 @@ header .follow a:hover{
 .contact .row form .box::placeholder,
 .contact .row form textarea::placeholder{
     text-transform: capitalize;
+    padding-left: 1rem;
+}
+.contact form input{
+    background: var(--secondary-color);
+    border-radius: .5rem;
+
 }
 
 .contact .row form textarea{
     height: 20rem;
     resize: none;
+    background-color: var(--secondary-color);
+    border-radius: .5rem;
 }
 .contact .row form .btn{
     margin-top: 0;
     margin-bottom: 1.5rem;
+    background-color: var(--button-span-color);
 }
 /* contact section styles ends */
 
