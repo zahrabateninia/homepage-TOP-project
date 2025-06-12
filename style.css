@@ -211,7 +211,7 @@ header .follow a:hover{
 
     font-size: 2.5rem;
     color: var(--khaki);
-    padding: .5rem 0;
+    padding: 1rem  0 2.5rem 0;
 }
 .btn{
     display: inline-block;
@@ -233,7 +233,8 @@ header .follow a:hover{
 /* about me section starts */
 .heading{
     font-size: 4rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem ;
     color: var(--light-color);
     text-transform: uppercase;
 }
@@ -410,19 +411,11 @@ header .follow a:hover{
     height: 25rem;
     position: relative;
     overflow: hidden;
-    /* border: 1rem solid var(--secondary-color); */
     border-radius: .5rem;
     background-color: var(--secondary-color);
-    padding: 1rem;
+    padding: .7rem;
 }
 
-/* .image {
-    background-color: red;
-    position: relative;
-    border-radius: 50%;
-    z-index: 1;
-    overflow: hidden;
-  } */
 .portfolio .box-container .box img{
     height: 100%;
     width: 100%;
@@ -437,34 +430,28 @@ header .follow a:hover{
 
 .portfolio .box-container .box:hover img{
     height: 75%;
-    width: 75%;
     filter: grayscale(0%);
 
 }
+.box .project-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
 .portfolio .box-container .box h3{
     text-transform: uppercase;
-    position: absolute;
-    bottom: .5rem; left: 1rem;
     color: var(--grey-color);
 }
-.portfolio .box-container .box .icons {
-    position: absolute;
-    top: 50%; /* move the top edge of .icons to the middle of its parent.*/
-    /* right: 1rem; */
-    right: 9%;
-    transform: translateX(-9%);
-    transform: translateY(-50%); /* pull it up by 50% of its own height for perfect centering*/
-  }
+
   
 .portfolio .box-container .box .icons a{
-    display: block; /*links are on top of each other*/
     height: 4rem; width: 4rem;
     border-radius: .5rem;
     font-size: 2.2rem;
     line-height: 4rem;
     color: var(--light-color);
     text-align: center;
-    margin-bottom: 1rem;
 }
 
 .portfolio .box-container .box .icons a:hover{
