@@ -277,51 +277,36 @@ header .follow a:hover{
     border-radius: 50rem;
 }
 
-.about .row-2 .skills .progress h3{
+/* my skills section  */
+.skills {
     display: flex;
-    justify-content: space-between;
-    padding: .7rem 0;
-    font-size: 1.7rem;
-    color: var(--very-dark-brown);
-    font-weight: 400;
-    color: var(--brown-sugar-color);
-}
-
-.about .row-2 .skills .progress .bar{
-    width: 100%;
-    background-color: var(--grey-color);
-    overflow: hidden;
-    height: 1rem;
-    border-radius: 50rem;
-}
-.about .row-2 .skills .progress .bar span{
-    display: block;
-    height: 100%;
-    background-color: var(--button-span-color);
-}
-
-/* bars */
-.about .row-2 .skills .progress:nth-child(1) .bar span{
-    width: 80%;
-    border-radius: 50rem;
-}
-.about .row-2 .skills .progress:nth-child(2) .bar span{
-    width: 80%;
-    border-radius: 50rem;
-}
-.about .row-2 .skills .progress:nth-child(3) .bar span{
-    width: 50%;
-    border-radius: 50rem;
-}
-.about .row-2 .skills .progress:nth-child(4) .bar span{
-    width: 90%;
-    border-radius: 50rem;
-}
-.about .row-2 .skills .progress:nth-child(5) .bar span{
-    width: 80%;
-    border-radius: 50rem;
-}
-/* end of bars */
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .skills i,
+  .skills img {
+    font-size: 2.5rem;
+    height: 40px;
+    width: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .skills img {
+    object-fit: contain;
+  }
+  
+  .skills i:hover,
+  .skills img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+  
+/* my skills section ends */
 
 
 /* service section starts */
@@ -601,6 +586,9 @@ footer span{
     color: var(--secondary-color);
 }
 
+.email{
+    text-transform: lowercase;
+}
 
 
 
