@@ -258,6 +258,7 @@ header .follow a:hover{
 .about .row-1 .content h3{
     color: var(--khaki);
     font-size: 3rem;
+    margin-bottom: 2rem;
 }
 .about .row-1 .content p{
     color: var(--khaki);
@@ -290,11 +291,14 @@ header .follow a:hover{
   
   .skills i,
   .skills img {
-    font-size: 2.5rem;
-    height: 40px;
-    width: 40px;
+    font-size: 6rem;
+    height: 6rem;
+    width: 6rem;
     transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    padding: 1rem;
   }
   
   .skills img {
@@ -309,43 +313,6 @@ header .follow a:hover{
   
 /* my skills section ends */
 
-
-/* service section starts */
-.service .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-
-}
-
-.box h3{
-    color: var(--very-dark-brown);
-    padding: 1.1rem;
-    font-size: 2.2rem;
-}
-.service .box-container .box{
-    flex: 1 1 30rem;
-    text-align: center;
-    padding: 2rem;
-    /* background: var(--light-color); */
-    background-color: var(--secondary-color);
-    border-radius: .5rem;
-    font-size: 2rem;
-    color: var(--light-color);
-}
-
-.service .box-container .box i{
-    height: 6rem;
-    width: 6rem;
-    line-height: 6rem;
-    font-size: 2.5rem;
-    color: var(--light-color);
-    background-color: var(--button-span-color);
-    border-radius: 50%;
-
-}
-
-/* service section ends */
 
 /* experience section styles start */
 .experience .box-container{
