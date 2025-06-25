@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,500&family=Open+Sans:ital,wght@0,300;1,400&family=Roboto:ital,wght@0,100;0,500;0,900;1,100;1,300;1,400&display=swap');
 
 :root{
-    --main-color: #AD6F5C;
-    --dark-pink: #A24442;
-    --grey: #dadad3;
-    --dark-grey: #777169;
-    --brown: #654B42;
-    --very-dark-brown: #312423;
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --primary-color : #252422; 
+    --secondary-color: #3f6c6155;
+    --button-span-color: #EB5E28;
+    --btn-hover: #f18a62;
+    --khaki: #a99f9fdc;
+    --grey-color: #DAC9B6;
+    --brown-sugar-color: #e6b4a5;   /* Dark brown for primary text */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 .5rem 1rem var(--shadow-color);
+    --light-color: #fffcf2d3;
+    --grey-color: #CCC5B9;
+    --dark-brown-color: #403D39;
+
 }
 *{
     font-family: 'Roboto', sans-serif;
@@ -31,7 +38,7 @@ html{
 }
 
 body{
-    background: var(--grey);
+    background: var(--primary-color);
     padding-left: 30rem;
 
 }
@@ -44,7 +51,9 @@ section{
 header{
     position: fixed;
     top:0; left:0;bottom:0;
-    background: var(--dark-grey);
+    background: var(--secondary-color);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* for Safari */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,7 +67,7 @@ header{
 
 header .logo{
     text-transform: uppercase;
-    color: white;
+    color: var(--light-color);
     font-size: 3rem;
     font-weight: bolder;
 
@@ -66,37 +75,37 @@ header .logo{
 
 header .logo span{
     text-transform: uppercase;
-    color: var(--dark-pink);
+    color: var(--button-span-color);
 }
 
 header .navbar a{
     display: block;
     font-size: 2rem;
-    color: white;
+    color: var(--grey-color);
     margin: 2rem 0;
 }
 
 header .navbar a:hover{
     letter-spacing: .1rem;
-    color: var(--main-color);
+    color: var(--btn-hover);
 }
 
 header .follow a{
     font-size: 2.5rem;
-    color: white;
+    color: var(--grey-color);
     margin: 0 .6rem;
 
 }
 header .follow a:hover{
-    color: var(--main-color)
+    color: var(--primary-color)
 }
 
 #menu-bars{
     position: fixed;
     right: 1rem; top: 1rem;
     z-index: 10000;
-    background: var(--dark-pink);
-    color: white;
+    background: var(--button-span-color);
+    color: var(--light-color);
     border-radius: .5rem;
     cursor: pointer;
     font-size: 3rem;
@@ -112,7 +121,7 @@ header .follow a:hover{
     position: absolute;
     top:0px; left: 0px;
     height:1rem; width:1rem;
-    background: var(--dark-pink);
+    background: var(--secondary-color);
     /*  Prevent the cursor element from interfering with mouse events 
     (e.g., clicks will go "through" it). This is useful for custom cursors or effect */
     pointer-events: none;
@@ -133,12 +142,12 @@ header .follow a:hover{
     position: absolute;
     top:0px; left: 0px;
     height:4rem; width:4rem;
-    border:.1rem solid var(--dark-pink);
+    border:.1rem solid var(--secondary-color);
     pointer-events: none;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     z-index: 10000;
-    transition: .3s linear;
+    transition: .1s linear;
 
 }
 
@@ -155,57 +164,67 @@ header .follow a:hover{
     flex-wrap: wrap;
     gap: 2rem;
 }
-
-.home .image{
+.home .image-wrapper {
     flex: 1 1 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;            /* keeps the wrapper square */
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: var(--secondary-color);     
+    overflow: hidden;              /* clips overflow */
 }
 
-.home .image img{
+.home .image-wrapper img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 20px 30px -10px rgba(86, 79, 79, 0.3);
+    display: block;
 }
 
 .home .content{
     flex: 1 1 40rem;
 }
 
-.home .content .hi{
-    font-size: 2rem;
-    color: var(--brown);
-}
 .home .content h3{
     font-size: 4rem;
-    color: var(--brown);
+    color: var(--light-color);
 }
 .home .content h3 span{
     font-size: 4rem;
-    color: var(--dark-pink);
+    color: var(--button-span-color);
     text-transform: uppercase;
 }
 
 .home .content .info{
 
     font-size: 2.5rem;
-    color: var(--brown);
+    color: var(--light-color);
     padding: .5rem 0;
 }
 .home .content .text{
 
     font-size: 2.5rem;
-    color: var(--dark-grey);
-    padding: .5rem 0;
+    color: var(--khaki);
+    padding: 1rem  0 2.5rem 0;
 }
 .btn{
     display: inline-block;
     margin-top: 1rem;
     padding: .8rem 3rem;
     font-size: 1.8rem;
-    background-color: var(--dark-pink);
-    color: white;
+    background-color: var(--button-span-color);
+    color: var(--light-color);
     border-radius: .2rem;
 }
 
 .btn:hover{
-    background-color: var(--main-color);
+    background-color: var(--btn-hover);
     letter-spacing: .3rem;
 }
 
@@ -214,12 +233,13 @@ header .follow a:hover{
 /* about me section starts */
 .heading{
     font-size: 4rem;
-    padding-bottom: 1rem;
-    color: var(--very-dark-brown);
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem ;
+    color: var(--light-color);
     text-transform: uppercase;
 }
 .heading span{
-    color: var(--dark-pink);
+    color: var(--button-span-color);
     text-transform: uppercase;
 
 }
@@ -236,11 +256,12 @@ header .follow a:hover{
 }
 
 .about .row-1 .content h3{
-    color: var(--brown);
+    color: var(--khaki);
     font-size: 3rem;
+    margin-bottom: 2rem;
 }
 .about .row-1 .content p{
-    color: var(--brown);
+    color: var(--khaki);
     font-size: 2rem;
     padding: .5rem 0;
 }
@@ -254,100 +275,44 @@ header .follow a:hover{
     flex: 1 1 20rem;
 }
 .about .row-1 .content .box-container .box span{
-    color: var(--main-color);
+    color: var(--button-span-color);
     border-radius: 50rem;
 }
 
-.about .row-2 .skills .progress h3{
-    display: flex;
-    justify-content: space-between;
-    padding: .7rem 0;
-    font-size: 1.7rem;
-    color: var(--very-dark-brown);
-    font-weight: 400;
-    color: var(--brown);
-}
-
-.about .row-2 .skills .progress .bar{
-    width: 100%;
-    background-color: white;
-    overflow: hidden;
-    height: 1rem;
-    border-radius: 50rem;
-}
-.about .row-2 .skills .progress .bar span{
-    display: block;
-    height: 100%;
-    background-color: #A24442;
-}
-
-/* bars */
-.about .row-2 .skills .progress:nth-child(1) .bar span{
-    width: 80%;
-    border-radius: 50rem;
-}
-.about .row-2 .skills .progress:nth-child(2) .bar span{
-    width: 80%;
-    border-radius: 50rem;
-}
-.about .row-2 .skills .progress:nth-child(3) .bar span{
-    width: 50%;
-    border-radius: 50rem;
-}
-.about .row-2 .skills .progress:nth-child(4) .bar span{
-    width: 90%;
-    border-radius: 50rem;
-}
-.about .row-2 .skills .progress:nth-child(5) .bar span{
-    width: 80%;
-    border-radius: 50rem;
-}
-/* end of bars */
-
-/* 
-.about .row-2 .box-container{
-    flex: 1 1 40rem;
-} */
-
-/* about me section ends */
-
-/* service section starts */
-.service .box-container{
+/* my skills section  */
+.skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-
-}
-
-.box h3{
-    color: var(--very-dark-brown);
-    padding: 1.1rem;
-    font-size: 2.2rem;
-}
-.service .box-container .box{
-    flex: 1 1 30rem;
-    text-align: center;
-    padding: 2rem;
-    /* background-color: var(--main-color); */
-    background: white;
-    box-shadow: var(--box-shadow);
-    border-radius: .5rem;
-    font-size: 2rem;
-    color: var(--dark-grey);
-}
-
-.service .box-container .box i{
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .skills i,
+  .skills img {
+    font-size: 6rem;
     height: 6rem;
     width: 6rem;
-    line-height: 6rem;
-    font-size: 2.5rem;
-    color: white;
-    background-color: var(--dark-pink);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    background-color: var(--light-color);
     border-radius: 50%;
+    padding: 1rem;
+  }
+  
+  .skills img {
+    object-fit: contain;
+  }
+  
+  .skills i:hover,
+  .skills img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+  
+/* my skills section ends */
 
-}
-
-/* service section ends */
 
 /* experience section styles start */
 .experience .box-container{
@@ -359,45 +324,34 @@ header .follow a:hover{
 .experience .box-container .box{
     position: relative;
     flex: 1 1 33rem;
-    border-left: .4rem solid var(--dark-pink);
+    border-left: .4rem solid var(--button-span-color);
     padding-left: 2rem;
-    padding-bottom: 2rem;
     padding-right: 2rem;
 }
 
-.experience .box-container .box:before{
-    content: '';
-    position: absolute;
-    top: 0; left: -1rem;
-    height: 2rem; width: 2rem;
-    border-radius: 50%;
-    background-color: var(--dark-pink);
-}
-
 .experience .box-container .box .content{
-    background-color: white;
+    background-color: var(--secondary-color);
     border-radius: .5rem;
-    box-shadow: var(--box-shadow);
     padding: 1.5rem;
 }
 
 .experience .box-container .box span{
     font-size: 1.5rem;
-    color: white;
-    background-color: #AD6F5C;
+    color: var(--light-color);
+    background-color: var(--button-span-color);
     border-radius: .5rem;
     padding: .5rem 1rem;
 }
 
 .experience .box-container .box h3{
     font-size: 2.5rem;
-    color: var(--very-dark-brown);
-    padding: .5rem 0;
+    color: var(--light-color);
+    padding: 1.5rem 0 1rem 0;
 }
 
 .experience .box-container .box p{
     font-size: 1.8rem;
-    color: var(--brown);
+    color: var(--light-color);
     padding: .5rem 0;
 }
 /* experience section styles end */
@@ -414,53 +368,51 @@ header .follow a:hover{
     height: 25rem;
     position: relative;
     overflow: hidden;
-    border: 1rem solid white;
     border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    background-color: white;
+    background-color: var(--secondary-color);
+    padding: .7rem;
 }
+
 .portfolio .box-container .box img{
     height: 100%;
     width: 100%;
-    /* maintain the image’s aspect ratio and ensure it completely covers the container,
-     even if part of the image gets cropped. */
     object-fit: cover;
-    border-radius: .5rem;
     position: relative;
     z-index: 1;
+    display: block;
+    filter: grayscale(100%);
+    border-radius: .5rem;
 }
+
 
 .portfolio .box-container .box:hover img{
     height: 75%;
-    width: 75%;
+    filter: grayscale(0%);
 
+}
+.box .project-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 .portfolio .box-container .box h3{
     text-transform: uppercase;
-    position: absolute;
-    bottom: .5rem; left: 1rem;
-    color: var(--very-dark-brown);
+    color: var(--grey-color);
 }
 
-.portfolio .box-container .box .icons{
-    position: absolute;
-    top: 1rem; right: 1rem;
-
-}
+  
 .portfolio .box-container .box .icons a{
-    display: block; /*links are on top of each other*/
     height: 4rem; width: 4rem;
     border-radius: .5rem;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     line-height: 4rem;
-    background-color: white;
-    color: var(--very-dark-brown);
+    color: var(--light-color);
     text-align: center;
-    margin-bottom: 1rem;
 }
 
 .portfolio .box-container .box .icons a:hover{
-    background-color: var(--main-color);
+    color: var(--button-span-color)
 }
 
 
@@ -479,8 +431,7 @@ header .follow a:hover{
     flex: 1 1 25rem;
     text-align: center;
     padding: 2rem;
-    background-color: white;
-    box-shadow: var(--box-shadow);
+    background-color: var(--secondary-color);
     border-radius: .5rem;
 
 }
@@ -488,18 +439,18 @@ header .follow a:hover{
     height: 5rem; width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    background-color: var(--dark-pink);
-    color: white;
+    background-color: var(--button-span-color);
+    color: var(--light-color);
     border-radius: 50%;
 
 }
 .contact .icons-container .icons h3{
-    color: var(--very-dark-brown);
+    color: var(--light-color);
     font-size: 2rem;
     padding: .6rem 0;
 }
 .contact .icons-container .icons p{
-    color: var(--brown);
+    color: var(--light-color);
     font-size: 1.7rem;
     padding: .6rem 0;
 }
@@ -513,47 +464,56 @@ header .follow a:hover{
 
 .contact .row form{
     flex: 1 1 55rem;
-    background-color: white;
+    background-color: var(--secondary-color);
     padding: 0 2rem;
-    box-shadow: var(--box-shadow);
     border-radius: .5rem;
 }
 .contact .row .map{
     flex: 1 1 25rem;
-    /* border: 1rem solid white; */
+    /* border: 1rem solid var(--grey-color); */
     width: 100%;
 }
 
 .contact .row form .box,
 .contact .row form textarea{
     width: 100%;
-    border-bottom: .1rem solid var(--grey);
+    border-bottom: .1rem solid var(--secondary-color);
     color: var(--very-dark-brown);
     text-transform: none;
     font-size: 1.7rem;
     padding: 1rem 0;
     margin: 1rem 0;
+    padding-left: 1.5rem;
 
 }
 
 
 .contact .row form .box:focus,
 .contact .row form textarea:focus{
-    border-color: var(--main-color);
+    border-color: var(--primary-color);
 }
 
 .contact .row form .box::placeholder,
 .contact .row form textarea::placeholder{
     text-transform: capitalize;
+    padding-left: 1rem;
+}
+.contact form input{
+    background: var(--secondary-color);
+    border-radius: .5rem;
+
 }
 
 .contact .row form textarea{
     height: 20rem;
     resize: none;
+    background-color: var(--secondary-color);
+    border-radius: .5rem;
 }
 .contact .row form .btn{
     margin-top: 0;
     margin-bottom: 1.5rem;
+    background-color: var(--button-span-color);
 }
 /* contact section styles ends */
 
@@ -563,14 +523,16 @@ footer{
     font-size: 1.4rem;
     padding: 1.5rem;
     text-align: center;
-    background-color: var(--main-color);
-    color: white;
+    color: var(--grey-color);
 }
 
 footer span{
-    color: var(--grey);
+    color: var(--secondary-color);
 }
 
+.email{
+    text-transform: lowercase;
+}
 
 
 
