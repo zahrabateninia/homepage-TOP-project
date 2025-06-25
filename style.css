@@ -289,26 +289,22 @@ header .follow a:hover{
     padding: 20px;
   }
   
-  .skills i,
   .skills img {
-    font-size: 6rem;
-    height: 6rem;
-    width: 6rem;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    width: 5.4rem;
+    height: 5.4rem;
+    margin: 1.2rem;
     cursor: pointer;
-    background-color: var(--light-color);
-    border-radius: 50%;
-    padding: 1rem;
+    filter: 
+        brightness(0) 
+        sepia(1) 
+        hue-rotate(20deg) 
+        saturate(5)
+        drop-shadow(0 0 8px var(--btn-hover));
+    transition:transform 0.3s ease;
   }
   
-  .skills img {
-    object-fit: contain;
-  }
-  
-  .skills i:hover,
   .skills img:hover {
-    transform: scale(1.2);
-    filter: brightness(1.2);
+    transform: scale(1.1);
   }
   
 /* my skills section ends */
@@ -354,6 +350,25 @@ header .follow a:hover{
     color: var(--light-color);
     padding: .5rem 0;
 }
+
+a .institute{
+    color: #bc841c; 
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+a.institute:hover,
+a.institute:focus {
+  color: #a06c17; /* darker on hover for contrast */
+  border-bottom: 1px solid #a06c17; 
+}
+a.institute:visited {
+    color: #8a631b; 
+  }
+
+
 /* experience section styles end */
 
 
@@ -399,6 +414,8 @@ header .follow a:hover{
 .portfolio .box-container .box h3{
     text-transform: uppercase;
     color: var(--grey-color);
+    padding: 1.1rem;
+    font-size: 2.2rem;
 }
 
   
@@ -414,7 +431,6 @@ header .follow a:hover{
 .portfolio .box-container .box .icons a:hover{
     color: var(--button-span-color)
 }
-
 
 /* portfolio section styles end */
 
