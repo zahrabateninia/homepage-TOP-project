@@ -299,7 +299,7 @@ header .follow a:hover{
         sepia(1) 
         hue-rotate(20deg) 
         saturate(5)
-        drop-shadow(0 0 8px var(--btn-hover));
+        drop-shadow(0 0 10px var(--btn-hover));
     transition:transform 0.3s ease;
   }
   
