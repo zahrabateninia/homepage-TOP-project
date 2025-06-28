@@ -605,12 +605,16 @@ footer span{
 
 /* Disable hover effects and filter on devices that don't support hover */
 @media (hover: none) and (pointer: coarse) {
-    .skills img {
-      filter: none;
-      transition: none;
-    }
-  
+ 
     .skills img:hover {
       transform: none;
     }
-  }
+    .portfolio .box-container .box img{
+        height: 75%;
+        filter: grayscale(0%);
+    
+    }
+
+}
+
+
