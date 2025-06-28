@@ -352,6 +352,7 @@ header .follow a:hover{
     padding: .5rem 0;
 }
 
+a institute:link,
 a .institute{
     color: #bc841c; 
     text-decoration: none;
