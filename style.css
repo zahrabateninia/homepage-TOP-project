@@ -481,7 +481,7 @@ a.institute:visited {
 .contact .row form{
     flex: 1 1 55rem;
     background-color: var(--secondary-color);
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     border-radius: .5rem;
 }
 .contact .row .map{
@@ -506,7 +506,7 @@ a.institute:visited {
 
 .contact .row form .box:focus,
 .contact .row form textarea:focus{
-    border-color: var(--primary-color);
+    border:.1rem solid var(--btn-hover);
 }
 
 .contact .row form .box::placeholder,
