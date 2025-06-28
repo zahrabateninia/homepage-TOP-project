@@ -361,7 +361,7 @@ a .institute{
 
 a.institute:hover,
 a.institute:focus {
-  color: #a06c17; /* darker on hover for contrast */
+  color: #a06c17; 
   border-bottom: 1px solid #a06c17; 
 }
 a.institute:visited {
@@ -543,7 +543,7 @@ footer{
 }
 
 footer span{
-    color: var(--secondary-color);
+    color: var(--brown-sugar-color);
 }
 
 .email{
@@ -584,7 +584,7 @@ footer span{
 
 @media (max-width:450px){
     html{
-        font-size: 50%; 
+        font-size: 45%; 
     }
     header{
         width:100%;
@@ -593,4 +593,24 @@ footer span{
         padding-left: 0;
     }
 
+
 }
+
+
+@media (max-width:520px){
+    .home .image-wrapper {
+        max-width: 35rem; 
+    }
+}
+
+/* Disable hover effects and filter on devices that don't support hover */
+@media (hover: none) and (pointer: coarse) {
+    .skills img {
+      filter: none;
+      transition: none;
+    }
+  
+    .skills img:hover {
+      transform: none;
+    }
+  }
