@@ -4,6 +4,7 @@
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     --primary-color : #252422; 
     --secondary-color: #3f6c6155;
+    --lighter-primary-color: #60a39255;
     --button-span-color: #EB5E28;
     --btn-hover: #f18a62;
     --khaki: #a99f9fdc;
@@ -361,7 +362,6 @@ a .institute{
 
 a.institute:hover,
 a.institute:focus {
-  color: #a06c17; 
   border-bottom: 1px solid #a06c17; 
 }
 a.institute:visited {
@@ -506,7 +506,7 @@ a.institute:visited {
 
 .contact .row form .box:focus,
 .contact .row form textarea:focus{
-    border:.1rem solid var(--btn-hover);
+    background-color: var(--lighter-primary-color);
 }
 
 .contact .row form .box::placeholder,
