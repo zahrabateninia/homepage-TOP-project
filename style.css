@@ -605,6 +605,13 @@ footer span{
     }
 }
 
+
+@media (max-width:470px){
+    .home .image-wrapper {
+        display: none; 
+    }
+}
+
 /* Disable hover effects and filter on devices that don't support hover */
 @media (hover: none) and (pointer: coarse) {
  
