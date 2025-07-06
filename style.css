@@ -376,6 +376,7 @@ a.institute:visited {
 /* portfolio section styles start */
 .portfolio .box-container{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
@@ -383,6 +384,7 @@ a.institute:visited {
     flex: 1 1 30rem;
     height: 25rem;
     max-width: 380px;
+    min-width: 400px;
     position: relative;
     overflow: hidden;
     border-radius: .5rem;
