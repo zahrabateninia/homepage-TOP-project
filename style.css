@@ -536,6 +536,11 @@ a.institute:visited {
 }
 /* contact section styles ends */
 
+.phone-link {
+    color: var(--khaki);
+    text-decoration: none;
+    font-weight: normal;
+  }
 
 footer{
     margin-top: 2rem;
