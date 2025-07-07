@@ -351,9 +351,7 @@ header .follow a:hover{
     color: var(--light-color);
     padding: .5rem 0;
 }
-
-a institute:link,
-a .institute{
+a.institute {
     color: #bc841c; 
     text-decoration: none;
     font-weight: 500;
@@ -363,11 +361,12 @@ a .institute{
 
 a.institute:hover,
 a.institute:focus {
-  border-bottom: 1px solid #a06c17; 
+    border-bottom: 1px solid #a06c17; 
 }
+
 a.institute:visited {
     color: #8a631b; 
-  }
+}
 
 
 /* experience section styles end */
